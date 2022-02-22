@@ -1,55 +1,133 @@
 @charset 'utf-8';
 
-/* パソコン、タブレット */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-	margin: 0;
-	padding: 0;
 	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-	color: #333;
+	background: #EEEEEE;
 	line-height: 150%;
 }
 
+/*------------------ header---------------------*/
 
-/*------------------ header ---------------------*/
+header {
+    display: flex;
+    padding: 0 16px;
+}
 
+.pc-menu{
+  display: none;
+}
 
-/*------------------ nav --------------------*/
+/* PCでのメニュー表示 */
+@media screen and (min-width:701px) and (max-width:1024px) {
 
+  .m-menu {
+      top: 10px;
+      right: 10px;
+  }
+  
+  .m-menu {
+    font-size: 32px;
+    line-height: 64px;
+    cursor: pointer;
+  }
+  
+  .m-menu #open.hide {
+    display: none;
+  }
+  
+}
+
+/*------------------ nav ---------------------*/
+/*--- スマホ版(画面が小さい場合) ---*/
+.overlay {
+  position: fixed;
+  top:0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  padding: 64px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s;
+}
+
+.overlay.show{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay #close {
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.overlay ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.overlay li {
+  margin-top: 24px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.overlay.show li {
+  opacity: 1;
+  transform: none;
+}
+
+/* スマホ画面幅でのメニュー表示 */
+
+@media(min-width: 700px) {
+  .m-menu{
+    display: none;
+  }
+  
+  .pc-menu {
+    display: block;
+    margin-left: auto;
+  }
+
+  .pc-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  .pc-menu a {
+    display: flex;
+    padding: 0 25px;
+    line-height: 64px;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    border-right: solid 1px;
+  }
+
+  .pc-menu a:hover {
+    background: #48d165;
+    color: white;
+}
+
+}
 
 /*------------------ footer ---------------------*/
 footer {
+    margin-top: 10px;
     clear: both;
     padding: 6px 0;
     width: 100%;
-    background: royalblue;
+    background: #005500;
     color: white;
     color: #fff;
     text-align: center;
-}
-
-/*タブレット 縦のみ	*/
-@media screen and (max-width: 1024px) and (orientation: portrait){
-    
-}
-/* タブレット 縦から */
-@media screen and (max-width: 1024px){
-    
-}
-/* スマホ 横のみ */
-@media screen and (max-width: 896px) and (orientation: landscape){
-    
-}
-/* スマホ 横から */ 
-@media screen and (max-width: 896px){
-    
-}
-/* スマホ　縦からは */
-@media screen and (max-width: 480px){
-    
 }
