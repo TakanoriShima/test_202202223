@@ -6,25 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Kazuma Iwaiのポートフォリオサイト</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!--メニュー一覧を表示するナビゲーションを作成-->
     <header>
         <div class="pc-menu">
-      <nav>
-          <ul>
-            <li><a href="#">Top</a></li>
-            <li><a href="#">このサイトについて</a></li>
-            <li><a href="#">ポートフォリオについて</a></li>
-            <li><a href="#">プロフィール</a></li>
-            <li><a href="#">連絡先</a></li>
-            <li><a href="#">English</a></li>
-      </nav>
-    </div>
-    <div class="m-menu">
-        <span class="material-icons" id="open">menu</span>
-    </div>
+          <nav>
+             <ul>
+                <li><a href="#">Top</a></li>
+                <li><a href="#">このサイトについて</a></li>
+                <li><a href="#">ポートフォリオについて</a></li>
+                <li><a href="#">プロフィール</a></li>
+                <li><a href="#">連絡先</a></li>
+                <li><a href="#">English</a></li>
+             </ul>
+          </nav>
+        </div>
+        <div class="m-menu">
+            <span class="material-icons" id="open">menu</span>
+        </div>
     </header>
     <div class="overlay">
         <span class="material-icons" id="close">close</span>
@@ -47,10 +49,10 @@
                 </li>
                 <li>
                     <a href="#">プロフィール</a>
-                    <ul>
-                        <li><a href="#">My Profile</a></li>
-                        <li><a href="#">My hobby</a></li>
-                    </ul>
+                    <!--<ul>-->
+                    <!--    <li><a href="#">My Profile</a></li>-->
+                    <!--    <li><a href="#">My hobby</a></li>-->
+                    <!--</ul>-->
                 </li>
                 <li><a href="#">連絡先</a></li>
                 <li><a href="#">English</a></li>
@@ -58,11 +60,21 @@
         </nav>
     </div>
     
-    <script src="js/script.js"></script>
     
+    <!--トップ画面の写真(福岡の街並み)-->
+    <div id="txt_animation">
+        <img src="images/hakata1.jpg" alt="博多の風景その1"></img>
+        <h1>Welcome to My Portfolio Site !!<br><br>
+            I Love HAKATA !!
+        </h1>
+    </div>
+    
+    
+    <!--フッタータグの作成-->
     <footer>
         <p>©2022 Kazuma Iwai</p>
     </footer>
-    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
